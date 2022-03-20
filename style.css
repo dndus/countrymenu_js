@@ -30,3 +30,12 @@ body {
     border-radius: 7px;
     background: #fff;
 }
+.content .search {
+    position: relative;
+}
+.search i {
+    left: 15px;
+    line-height: 53px;
+    position: absolute;
+}
+
