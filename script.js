@@ -255,7 +255,7 @@ let countries = [
 
 function addCountry() {
     countries.forEach(country => {
-        let li = ``
+        let li = `<li>${country}</li>`
     });
 };
 
