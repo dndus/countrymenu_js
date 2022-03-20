@@ -56,6 +56,17 @@ body {
     max-height: 250px;
     overflow-y: auto;
 }
+.options::-webkit-scrollbar {
+    width: 7px;
+}
+.options::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 25px;
+} 
 .options li {
     height: 50px;
     padding: 0 13px;
