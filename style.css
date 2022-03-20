@@ -23,7 +23,7 @@ body {
     background: #fff;
     justify-content: space-between; 
 }
-.select-btn i {
+.select-btn i{
     font-size: 31px;
 }
 .content {
@@ -53,11 +53,14 @@ body {
 }
 .content .options {
     margin-top: 10px;
+    max-height: 250px;
+    overflow-y: auto;
 }
 .options li {
     height: 50px;
     padding: 0 13px;
     font-size: 21px;
+    list-style-type: none;
     border-radius: 5px;
 }
 .options li:hover {
