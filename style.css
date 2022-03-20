@@ -27,10 +27,14 @@ body {
     font-size: 31px;
 }
 .content {
+    display: none;
     padding: 20px;
     margin-top: 15px;
     border-radius: 7px;
     background: #fff;
+}
+.wrapper.active .content {
+    display: block;
 }
 .content .search {
     position: relative;
