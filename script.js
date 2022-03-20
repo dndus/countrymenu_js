@@ -1,5 +1,7 @@
 const wrapper = document.querySelector(".wrapper");
 const selectBtn = wrapper.querySelector(".select-btn");
+const options = wrapper.querySelector(".options");
+const searchInp = wrapper.querySelector("input");
 
 let countries = [
 	"Afghanistan",
@@ -235,13 +237,11 @@ let countries = [
 	"Uganda",
 	"Ukraine",
 	"United Arab Emirates (the)",
-	"United Kingdom of Great Britain and Northern Ireland (the)",
-	"United States Minor Outlying Islands (the)",
-	"United States of America (the)",
+	"United Kingdom",
 	"Uruguay",
 	"Uzbekistan",
 	"Vanuatu",
-	"Venezuela (Bolivarian Republic of)",
+	"Venezuela",
 	"Viet Nam",
 	"Virgin Islands (British)",
 	"Virgin Islands (U.S.)",
@@ -253,11 +253,30 @@ let countries = [
 	"Åland Islands"
 ];
 
-function addCountry() {
+function addCountry(selectedCountry) {
+    options.innerHTML = "";
     countries.forEach(country => {
-        let li = `<li>${country}</li>`
+        let li = `<li onclick="updateName(this)">${country}</li>`
+        options.insertAdjacentHTML("beforeend", li);
     });
-};
+}
+addCountry();
+
+function updateName(selectedli) {
+    searchInp.value = "";
+    addCountry(selectedli.innerText);
+    wrapper.classList.remove("active");
+    selectBtn.firstElementChild.innerText = selectedli.innerText;
+}
+
+searchInp.addEventListener("keyup", () => {
+    let arr = []
+    let searchVal = searchInp.value.toLowerCase();
+    arr = countries.filter(data => {
+        return data.toLowerCase().startsWith(searchVal);
+    }).map(data => `<li onclick="updateName(this)>${data}</li>`).join("");
+    options.innerHTML = arr ? arr : `<p>Country not found!</p>`;
+})
 
 selectBtn.addEventListener("click", () => {
     wrapper.classList.toggle("active");
