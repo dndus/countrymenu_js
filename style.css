@@ -10,3 +10,23 @@ body {
     width: 370px;
     margin: 130px auto 0;
 }
+.select-btn {
+    height: 65px;
+    font-size: 22px;
+    display: flex;
+    cursor: pointer;
+    padding: 0 20px;
+    border-radius: 7px;
+    background: #fff;
+    align-items: center;
+    justify-content: space-between; 
+}
+.select-btn i {
+    font-size: 31px;
+}
+.content {
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 7px;
+    background: #fff;
+}
