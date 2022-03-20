@@ -10,15 +10,17 @@ body {
     width: 370px;
     margin: 130px auto 0;
 }
-.select-btn {
-    height: 65px;
-    font-size: 22px;
+.select-btn, .options i {
     display: flex;
     cursor: pointer;
+    align-items: center;
+}
+.select-btn{
+    height: 65px;
+    font-size: 22px;
     padding: 0 20px;
     border-radius: 7px;
     background: #fff;
-    align-items: center;
     justify-content: space-between; 
 }
 .select-btn i {
@@ -35,7 +37,27 @@ body {
 }
 .search i {
     left: 15px;
+    color: #999;
+    font-size: 20px;
     line-height: 53px;
     position: absolute;
 }
-
+.search input {
+    height: 53px;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding: 0 15px 0 43px;
+    border: 1px solid #b3b3b3;
+    border-radius: 5px;
+}
+.content .options {
+    margin-top: 10px;
+}
+.options li {
+    height: 50px;
+    border-radius: 5px;
+}
+.options li:hover {
+    background-color: #f2f2f2;
+}
